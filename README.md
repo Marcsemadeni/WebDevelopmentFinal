@@ -1,5 +1,10 @@
 # H1 Final Project
-I will be creating a website to host my multiplayer game. It will include a main page to create a player, multiple pages to create different games, and a page dedicated to joining games. I plan to make it very interactive and pleasing to look at. 
+I will be creating a website to host my multiplayer game. It will include atleast 4 different pages. This will be the welcoming page, where he user creates a name, A page to join servers, and 2 seperate pages to create a chess or checkers game. 
+
+I would like to build this because I am already planning on making chess and checkers for another class. Currently the user experience with Chess and Checkers will be terrible because I would only be using blazor, which I am not familiar with. As I have learned how to create my own website with html, css, and js, I've wanted to combine C# with these other languages. This will not only allow me to have a game that will look much better, but I will learn how to link different coding languages together
+
+What really excites me is having multiple people on the site, and it will be interactive for all the people. The list of servers will constantly be changing based on people creating and joining games. If time allows, I also want to try adding a lot of effects, such as the objects getting bigger or even flipping 180 to show a "backside". I hope that this will be a game hub that will look good in the user's eyes.
+
 
 - April 6
     1. Create files
