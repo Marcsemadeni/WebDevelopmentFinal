@@ -1,0 +1,36 @@
+:root {
+    --color1: #35374B;
+    --color2: #344955;
+    --color3: #50727B;
+    --color4: #78A083;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    min-height: 100vh;
+}
+
+header {
+    background-color: var(--color1);
+    height: 7em;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+}
+
+#sideNav {
+    display: flex;
+    background-color: var(--color2);
+    width: 10em;
+}
+
+#mainPage {
+    display: flex;
+    background-color: rgb(247, 244, 244);
+    flex-grow: 1;
+}
