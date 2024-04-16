@@ -46,9 +46,10 @@ main {
 
 #mainPage {
     display: flex;
-    background-color: rgb(247, 244, 244);
+    flex-direction: column;
     flex-grow: 1;
-    margin: 3em;
+    justify-content: center;
+    align-items: center;
 }
 
 a {
@@ -62,15 +63,24 @@ a {
     background-color: #fff;
     border-radius: 15px;
     box-shadow: 0px 10px 20px 20px #0000002b;
-    padding: 30px 35px;
     text-align: left;
-    max-height: 20em;
-    flex-grow: 1;
-    min-width: 20em;
+    max-height: 25em;
+    min-width: 80%;
+    max-width: 40em;
 }
 
 h1 {
-    margin-bottom: 6px;
+    margin-bottom: .8em;
+    margin: 1em 10%;
+
+}
+
+#cardContainer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+    align-content: space-evenly;
 }
 
 .card {
@@ -83,11 +93,9 @@ h1 {
     min-width: 24%;
     text-align: center;
     flex-grow: 1;
+    margin: 1em;
 }
 
-.card:not(.last-child){
-    margin-right: 30px;
-}
 
 .img {
     height: 100%;
@@ -109,5 +117,18 @@ h1 {
     font-size: 18px;
     font-weight: 700;
     padding: 0 10px;
-    margin-bottom: 3px;
+    margin-bottom: .5em;
+}
+
+/* done testing */
+
+#link
+{
+    background-color: rgb(124, 124, 124);
+    border-radius: 1em;
+    padding: .4em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
