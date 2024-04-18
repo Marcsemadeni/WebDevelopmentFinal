@@ -17,6 +17,7 @@ header {
     height: 5em;
     color: rgb(239, 239, 239);
     padding: 2em;
+    border-bottom-right-radius: 1em;
 }
 
 h2 {
@@ -35,6 +36,8 @@ main {
     background-color: var(--color2);
     width: 10em;
     align-items: center;
+    border-top-right-radius: 1em;
+    border-bottom-right-radius: 1em;
 }
 
 #groupedLinks {
@@ -48,7 +51,8 @@ main {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    justify-content: center;
+    /* justify-content: center; */
+    margin-top: 15%;
     align-items: center;
 }
 
@@ -141,14 +145,20 @@ h1 {
 .cell { 
     height: 2em; 
     width: 2em; 
-    border: 1.5px solid grey; 
+    border: 1px solid grey; 
     border-style: inset; 
   } 
     
   .blackcell { 
-    background-color: black; 
+    /* background-color: black;  */
+    background-color: rgb(158, 48, 31);
   } 
     
   .whitecell { 
-    background-color: white; 
+    /* background-color: white;  */
+    background-color: rgb(233, 192, 134);
+  }
+
+  #chessTable {
+    width: auto;
   }

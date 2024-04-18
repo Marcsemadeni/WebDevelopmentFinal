@@ -4,6 +4,7 @@ function CreateBoard() {
     var board = document.getElementById("board")
 // Create a table element 
 var ChessTable = document.createElement('table')
+ChessTable.id = "chessTable";
 for (var i = 0; i < 8; i++) { 
   
     // Create a row 
@@ -33,11 +34,11 @@ for (var i = 0; i < 8; i++) {
     // Append the row 
     ChessTable.appendChild(tr); 
 } 
+// center.appendChild(ChessTable); 
 center.appendChild(ChessTable); 
-  
-// Modifying table attribute properties 
+
 ChessTable.setAttribute('cellspacing', '0'); 
-ChessTable.setAttribute('width', '270px'); 
+// ChessTable.setAttribute('width', '270px'); 
 board.appendChild(center);
 }
 
