@@ -5,3 +5,13 @@ export const GetMessage = async () => {
     const respone = await fetch(link)
     return await respone.json();
 }
+
+//code for c#
+
+// app.UseCors(x => x.AllowAnyHeader().AllowAnyOrigin().AllowAnyMethod());
+
+// var msg = "Hello World";
+// app.MapGet("/checkers/helloworld", () => {
+
+//     return new {msg};
+// });
