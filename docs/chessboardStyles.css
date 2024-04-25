@@ -1,0 +1,25 @@
+/* board */
+:root {
+    --chessBoardWhite: rgb(233, 192, 134);
+    --chessBoardBlack: rgb(158, 48, 31);
+}
+.cell {
+    height: 2em;
+    width: 2em;
+    border: 1px solid grey;
+    border-style: inset;
+}
+
+.blackcell {
+    /* background-color: black;  */
+    background-color: var(--chessBoardBlack);
+}
+
+.whitecell {
+    /* background-color: white;  */
+    background-color: var(--chessBoardWhite);
+}
+
+#chessTable {
+    width: auto;
+}
