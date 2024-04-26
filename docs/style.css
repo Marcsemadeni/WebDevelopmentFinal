@@ -3,6 +3,7 @@
     --color2: #344955;
     --color3: #50727B;
     --color4: #78A083;
+    --gray: rgb(124, 124, 124);
 }
 
 body {
@@ -10,11 +11,12 @@ body {
     flex-direction: column;
     margin: 0;
     min-height: 100vh;
+    max-height: 100vh;
 }
 
 header {
     background-color: var(--color1);
-    height: 5em;
+    max-height: 5em;
     color: rgb(239, 239, 239);
     padding: 2em;
     border-bottom-right-radius: 1em;
@@ -30,11 +32,44 @@ main {
     flex-grow: 1;
 }
 
+#getUserName {
+    width: 90%;
+    height: 60%;
+    background-color: var(--color3);
+    position: absolute;
+    z-index: 2;
+    border-radius: 1em;
+    opacity: 95%;
+    margin: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#getUserNameForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--gray);
+    border-radius: 1em;
+    padding: 3em;
+}
+
+#submit {
+    border-radius: 1em;
+    background-color: var(--color4);
+}
+
+.hidden {
+    display: none !important;
+}
+
 #sideNav {
     display: flex;
     flex-direction: column;
     background-color: var(--color2);
-    width: 10em;
     align-items: center;
     border-top-right-radius: 1em;
     border-bottom-right-radius: 1em;
@@ -45,6 +80,8 @@ main {
     display: flex;
     flex-direction: column;
     align-items: space-between;
+    margin: .4em;
+    margin-right: 1em;
 }
 
 #mainPage {
@@ -52,7 +89,7 @@ main {
     flex-direction: column;
     flex-grow: 1;
     /* justify-content: center; */
-    margin-top: 15%;
+    /* margin-top: 5em; */
     align-items: center;
 }
 
@@ -76,6 +113,7 @@ a {
     max-height: 25em;
     min-width: 80%;
     max-width: 40em;
+    margin-top: 5em;
 }
 
 h1 {
@@ -92,6 +130,7 @@ h1 {
     align-content: space-evenly;
 }
 
+
 .card {
     border-radius: 15px;
     box-shadow: 5px 5px 20px -5px #00000099;
@@ -105,8 +144,16 @@ h1 {
     margin: 1em;
 }
 
+.grow {
+    transition: 1s;
+}
 
-.img {
+.grow:hover {
+    box-shadow: 20px 20px 30px -10px #00000099;
+    transform:scale(105%)
+}
+
+.img{
     height: 70%;
     margin: .2em;
     margin-top: 1em;
@@ -132,10 +179,8 @@ h1 {
     margin-bottom: .5em;
 }
 
-/* done testing */
-
 #link {
-    background-color: rgb(124, 124, 124);
+    background-color: var(--gray);
     border-radius: 1em;
     padding: .4em;
     display: flex;

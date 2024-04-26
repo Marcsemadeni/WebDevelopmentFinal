@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css"> <!-- If any references don't work, add ../ and the beginning -->
-    <script src="" type="module"></script>
+    <script src="./username.js" type="module"></script>
     <title>Home</title>
 </head>
 
@@ -40,14 +40,24 @@
         </div>
         <!-- https://www.svgrepo.com/ -->
         <div id="mainPage">
+
+            <div id="getUserName">
+                <form method="get" id="getUserNameForm">
+                    <h3>UserName</h3>
+                    <input type="text" name="Name" id="username">
+                    <br>
+                    <input type="submit" id="submit">
+                </form>
+            </div>
+
             <div id="contentContainer">
                 <h1>Options</h1>
                 <hr>
                 <div id="cardContainer">
 
-                <div class="card one">
+                <div class="card one grow">
                     <a href="chess.html">
-                    <img class="img" src="./images/chess-3-svgrepo-com.svg">
+                            <img class="img" src="./images/chess-3-svgrepo-com.svg">
                     <div class="cardText">
                             <p class="cardTitle">
                                 Chess
@@ -55,7 +65,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="card two">
+                <div class="card two grow">
                     <a href="checkers.html">
                     <img class="img" src="./images/checkers-svgrepo-com.svg">
                     <div class="cardText">
@@ -65,7 +75,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="card three">
+                <div class="card three grow">
                     <a href="servers.html">
                     <img class="img" src="./images/servers-server-svgrepo-com.svg">
                     <div class="cardText">

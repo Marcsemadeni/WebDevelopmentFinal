@@ -17,10 +17,11 @@ input.addEventListener("input", () => {
 const loadServers = (servers) => {
     const containerlists = document.getElementById("contentContainer")
     containerlists.textContent = ""
-
+    
     servers.forEach(server => {
         const container = document.createElement("div")
         container.classList.add("serverContainer")
+        container.classList.add("grow")
 
         const serverPlayer = document.createElement("p")
         serverPlayer.textContent = `${server.host}`
