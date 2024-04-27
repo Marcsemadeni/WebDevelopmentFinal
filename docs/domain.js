@@ -16,17 +16,17 @@ export const Servers = [
     },
     {
         game: "Checkers",
-        host: "Player 4",
+        host: "Jimbo Baggins",
         status: "Join",
     },
     {
         game: "Checkers",
-        host: "Player 5",
+        host: "Jack da Ripper",
         status: "Join",
     },
     {
         game: "Checkers",
-        host: "Player 6",
+        host: "coolNinja101",
         status: "Join",
     },
     {

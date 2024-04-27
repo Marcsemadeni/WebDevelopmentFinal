@@ -22,10 +22,6 @@ header {
     border-bottom-right-radius: 1em;
 }
 
-h2 {
-    text-align: center;
-}
-
 main {
     display: flex;
     flex-direction: row;
@@ -169,7 +165,6 @@ h1 {
     height: 70%;
     margin: .2em;
     margin-top: 1em;
-    /* position: absolute; */
 }
 
 .cardText {
@@ -188,6 +183,10 @@ h1 {
     font-size: 18px;
     font-weight: 700;
     padding: 0 10px;
-    margin-bottom: .5em;
+    margin-bottom: 2em; /* was .5*/
 }
 
+#showUserName {
+    margin-top: 1em;
+    position: absolute;
+}
