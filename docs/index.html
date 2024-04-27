@@ -14,39 +14,42 @@
         <h2>Chess And Checkers</h2>
     </header>
     <main>
-        <div id="sideNav">
-            <div id="groupedLinks">
-                <p id="link">
+        <section id="sideNav">
+            <ol id="groupedLinks">
+                <ul id="link">
                     <a href="./index.html">
                         Home
                     </a>
-                </p>
-                <p id="link">
+                </ul>
+                <ul id="link">
                     <a href="./chess.html">
                         Chess
                     </a>
-                </p>
-                <p id="link">
+                </ul>
+                <ul id="link">
                     <a href="./checkers.html">
                         Checkers
                     </a>
-                </p>
-                <p id="link">
+                </ul>
+                <ul id="link">
                     <a href="./servers.html">
                         Join Game
                     </a>
-                </p>
-            </div>
-        </div>
+                </ul>
+            </ol>
+        </section>
         <!-- https://www.svgrepo.com/ -->
         <div id="mainPage">
 
-            <div id="getUserName">
+            <div id="getUserName" class="hidden"> <!--Dont forget to remove this class-->
                 <form method="get" id="getUserNameForm">
                     <h3>UserName</h3>
                     <input type="text" name="Name" id="username">
                     <br>
-                    <input type="submit" id="submit">
+                    <div>
+                        <input type="reset" id="reset" />
+                        <input type="submit" id="submit" />
+                    </div>
                 </form>
             </div>
 
@@ -54,40 +57,40 @@
                 <h1>Options</h1>
                 <hr>
                 <div id="cardContainer">
-
-                <div class="card one grow">
-                    <a href="chess.html">
+                    <div class="card one grow">
+                        <a href="chess.html">
                             <img class="img" src="./images/chess-3-svgrepo-com.svg">
-                    <div class="cardText">
-                            <p class="cardTitle">
-                                Chess
-                            </p>
+                            <div class="cardText">
+                                <p class="cardTitle">
+                                    Chess
+                                </p>
+                            </div>
                         </a>
                     </div>
-                </div>
-                <div class="card two grow">
-                    <a href="checkers.html">
-                    <img class="img" src="./images/checkers-svgrepo-com.svg">
-                    <div class="cardText">
-                            <p class="cardTitle">
-                                Checkers
-                            </p>
+                    <div class="card two grow">
+                        <a href="checkers.html">
+                            <img class="img" src="./images/checkers-svgrepo-com.svg">
+                            <div class="cardText">
+                                <p class="cardTitle">
+                                    Checkers
+                                </p>
+                            </div>
                         </a>
                     </div>
-                </div>
-                <div class="card three grow">
-                    <a href="servers.html">
-                    <img class="img" src="./images/servers-server-svgrepo-com.svg">
-                    <div class="cardText">
-                            <p class="cardTitle">
-                                Join Game
-                            </p>
+                    <div class="card three grow">
+                        <a href="servers.html">
+                            <img class="img" src="./images/servers-server-svgrepo-com.svg">
+                            <div class="cardText">
+                                <p class="cardTitle">
+                                    Join Game
+                                </p>
+                            </div>
                         </a>
                     </div>
                 </div>
             </div>
 
-            </div>
+        </div>
         </div>
     </main>
 </body>

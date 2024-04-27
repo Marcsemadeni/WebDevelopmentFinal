@@ -1,6 +1,6 @@
 import { GetMessage } from "./svc.js";
 
-// console.log(await GetMessage()) doesn't work no more :/
+console.log(await GetMessage())
 function CreateBoard() {
     var center = document.createElement('center')
     var board = document.getElementById("board")
