@@ -1,9 +1,15 @@
-const url = "http://localhost:5226";
-export const GetMessage = async () => {
-    //Can't use normal checkers link cause of blazor, wrap everything in {} in c# to make it an object.
-    const link = url + "/doc/checkers/helloworld";
-    const respone = await fetch(link)
-    return await respone.json();
+const basicUrl = "http://localhost:5226";
+const url = basicUrl + "/doc/checkers";
+
+export const NewGame = async () => {
+    const link = url + "/newGame"
+    const response = await fetch(link)
+    return await response.json()
+}
+
+export const GetBoardFromApi = async () => { 
+    const response = await fetch(`${url}/getBoard`)
+    return await response.json()
 }
 
 //code for c#
@@ -15,3 +21,5 @@ export const GetMessage = async () => {
 
 //     return new {msg};
 // });
+
+
