@@ -12,6 +12,21 @@ export const GetBoardFromApi = async () => {
     return await response.json()
 }
 
+export const SendClicktoApi = async (row, column) => {
+    const body = {
+        row: row,
+        column: column
+    }
+    await fetch(`${url}/sendClick`, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(body),
+    })
+    console.log(JSON.stringify(body))
+}
+
 //code for c#
 
 // app.UseCors(x => x.AllowAnyHeader().AllowAnyOrigin().AllowAnyMethod());

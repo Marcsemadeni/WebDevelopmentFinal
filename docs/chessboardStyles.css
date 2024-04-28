@@ -30,5 +30,6 @@
 }
 
 .checkerImg {
-    height: 2em;
+    height: inherit;
+    pointer-events: none;
 }

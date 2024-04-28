@@ -1,4 +1,4 @@
-import { GetBoardFromApi, NewGame } from "./svc.js";
+import { GetBoardFromApi, NewGame, SendClicktoApi } from "./svc.js";
 
 // console.log(await NewGame())
 // console.log(await GetBoardFromApi())
@@ -11,21 +11,38 @@ const PlacePiecesOnBoard = async () => {
         // console.log(boardInfo.piece[i])
         var row = boardInfo.piecePos[i].row
         var col = boardInfo.piecePos[i].column
-        var tile = document.getElementById(`[${row},${col}]`)
+        var tile = document.getElementById(`${row},${col}`)
         var image = document.createElement("img")
+
         image.classList.add("checkerImg")
         if (boardInfo.piece[i] == null) {
-            // console.log("Leave Image Empty")
+            tile.replaceChildren()
+            image.src = ""
+            tile.appendChild(image)
         }
+        //Update this when you get to super pieces
         else if (boardInfo.piece[i].color == 1) {
+            tile.replaceChildren()
             image.src = "./images/black-circle-svgrepo-com.svg"
             tile.appendChild(image)
         }
         else if (boardInfo.piece[i].color == 2) {
+            tile.replaceChildren()
             image.src = "./images/red-circle-svgrepo-com.svg"
-            // console.log(image)
             tile.appendChild(image)
         }
+        //event listeners here
+        tile.addEventListener("click", (e) => {
+        e.stopImmediatePropagation()
+           var position = e.target.id
+           var splitPosition = position.split(',')
+           var row = splitPosition[0]
+           var column = splitPosition[1]
+           console.log(row + "," + column)
+           
+           SendClicktoApi(row, column)
+           PlacePiecesOnBoard()
+        })
     }
 }
 
@@ -43,7 +60,7 @@ function CreateBoard() {
 
             // Create a cell 
             var td = document.createElement('td')
-            td.id = `[${i},${j}]`
+            td.id = `${i},${j}`
             if ((i + j) % 2 == 0) {
 
                 // Create a class attribute for all white cells 
