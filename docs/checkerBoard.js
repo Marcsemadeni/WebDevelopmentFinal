@@ -136,7 +136,7 @@ const DisplayWinner = async() => {
 
         console.log(gameStatus.gameState.result)
         var winner = document.getElementById("winner")
-        var player = DeterminePlayer(gameResult.winner)
+        var player = await DeterminePlayer(gameResult.winner)
         winner.innerText = `${player}`
     }
     else
