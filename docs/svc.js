@@ -14,8 +14,8 @@ export const GetBoardFromApi = async () => {
 
 export const SendClicktoApi = async (row, column) => {
     const body = {
-        row: row,
-        column: column
+        Row: row,
+        Column: column
     }
     await fetch(`${url}/sendClick`, {
         method: "POST",
@@ -27,6 +27,15 @@ export const SendClicktoApi = async (row, column) => {
     console.log(JSON.stringify(body))
 }
 
+export const GetLeaderBoard = async () => {
+    const response = await fetch(`${url}/getLeaderBoard`)
+    return await response.json()
+}
+
+export const GetGameStatus = async () => {
+    const response = await fetch(`${url}/getGameStatus`)
+    return await response.json()
+}
 //code for c#
 
 // app.UseCors(x => x.AllowAnyHeader().AllowAnyOrigin().AllowAnyMethod());

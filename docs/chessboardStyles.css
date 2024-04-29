@@ -32,4 +32,38 @@
 .checkerImg {
     height: inherit;
     pointer-events: none;
+    
+}
+
+.highlight {
+    background-color: rgb(102, 222, 102) !important;
+}
+
+#winnerContainer {
+    background-color: gray;
+    width: 28em;
+    height: 15em;
+    position: absolute;
+    margin-top: 12.4em;
+    border-radius: 1em;
+    opacity: 90%;
+    align-content: center;
+    padding-left: 3em;
+}
+
+#winnerBox {
+    background-color: rgb(162, 162, 162);
+    height: 12em;
+    width: 25em;
+    border-radius: .5em;
+    text-align: center;
+    padding-top: 1em;
+}
+
+.newGame {
+    border-radius: 1em;
+}
+
+#currentPlayerBox {
+    text-align: center;
 }

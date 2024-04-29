@@ -40,12 +40,27 @@
             </ol>
         </section>
         <section id="mainPage">
-            <h2>Checkers</h2>
+            <h1>Checkers</h1>
+            <div id="currentPlayerBox" class="absolute">
+                <h2 id="currentPlayer">Red's turn</h2>
+            </div>
+            <div id="winnerContainer" class="hidden">
+                <div id="winnerBox">
+                    <h2>Winner:</h2>
+                    <h3 id="winner">Player 1</h3>
+                    <!-- <form  id="ResetGame">
+                        <input type="submit" value="New Game" class="newGame">
+                    </form> -->
+                </div>
+            </div>
             <div id="contentContainer">
                 <div id="board">
 
                 </div>
             </div>
+            <form  id="ResetGame">
+                <input type="submit" value="New Game" class="newGame">
+            </form>
         </section>
     </main>
 </body>
