@@ -13,6 +13,7 @@ const PlacePiecesOnBoard = async () => {
         var col = boardInfo.piecePos[i].column
         var tile = document.getElementById(`${row},${col}`)
         var image = document.createElement("img")
+        image.draggable = true
 
         image.classList.add("checkerImg")
         if (boardInfo.piece[i] == null) {
@@ -26,17 +27,21 @@ const PlacePiecesOnBoard = async () => {
             image.src = "./images/black-circle-svgrepo-com.svg"
 
             tile.appendChild(image)
+
+
         }
         else if (boardInfo.piece[i].color == 2  && boardInfo.piece[i].type == 0) {
             tile.replaceChildren()
             image.src = "./images/red-circle-svgrepo-com.svg"
             tile.appendChild(image)
+
         }
         else if (boardInfo.piece[i].color == 1 && boardInfo.piece[i].type == 1) {
             tile.replaceChildren()
             image.src = "./images/black-500-in-a-black-circle-with-an-outline-svgrepo-com.svg"
 
             tile.appendChild(image)
+
         }
         else if (boardInfo.piece[i].color == 2  && boardInfo.piece[i].type == 1) {
             tile.replaceChildren()
@@ -48,7 +53,7 @@ const PlacePiecesOnBoard = async () => {
         //event listeners here
         tile.addEventListener("click", async (e) => {
             e.stopImmediatePropagation()
-
+            // console.log("here")
             var position = e.target.id
             var splitPosition = position.split(',')
             var row = splitPosition[0]
@@ -64,6 +69,59 @@ const PlacePiecesOnBoard = async () => {
             await DisplayWinner()
             await PlacePiecesOnBoard()
         })
+
+        image.addEventListener("click", async (e) => {
+            // console.log(e.target.parentElement)
+            e.stopImmediatePropagation()
+            // console.log("here")
+            var position = e.target.parentElement.id
+            var splitPosition = position.split(',')
+            var row = splitPosition[0]
+            var column = splitPosition[1]
+            // console.log(row + "," + column)
+
+            var currentTile = document.getElementById(`${row},${column}`)
+            // currentTile.classList.add("highlight")
+
+
+            await SendClicktoApi(row, column)
+            await DisplayCurrentPlayer()
+            await DisplayWinner()
+            await PlacePiecesOnBoard()
+        })
+
+        image.addEventListener("dragstart", async (e) => {
+            var position = e.target.parentElement.id
+            var splitPosition = position.split(',')
+            var row = splitPosition[0]
+            var column = splitPosition[1]
+
+            await SendClicktoApi(row, column)
+            await DisplayCurrentPlayer()
+            await DisplayWinner()
+            await PlacePiecesOnBoard()
+        })
+
+
+        tile.addEventListener("dragover", (e) => {
+            e.preventDefault()
+        })
+
+        tile.addEventListener("drop", async (e) => {
+            e.stopImmediatePropagation()
+            // console.log("dropped on " + e.target.id)
+            var position = e.target.id
+            var splitPosition = position.split(',')
+            var row = splitPosition[0]
+            var column = splitPosition[1]
+
+            await SendClicktoApi(row, column)
+            await DisplayCurrentPlayer()
+            await DisplayWinner()
+            await PlacePiecesOnBoard()
+        })
+
+
     }
 }
 
@@ -93,7 +151,7 @@ const DisplayCurrentPlayer = async () => {
     // console.log(data.gameState.currentPlayer)
     var player = await DeterminePlayer(data.gameState.currentPlayer)
     playerBox.innerText = `${player}'s turn`
-    console.log(player)
+    // console.log(player)
     
 
 }

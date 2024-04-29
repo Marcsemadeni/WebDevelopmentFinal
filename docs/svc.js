@@ -24,7 +24,7 @@ export const SendClicktoApi = async (row, column) => {
         },
         body: JSON.stringify(body),
     })
-    console.log(JSON.stringify(body))
+    // console.log(JSON.stringify(body))
 }
 
 export const GetLeaderBoard = async () => {
